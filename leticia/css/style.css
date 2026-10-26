@@ -1,0 +1,220 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef1f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 30px 15px;
+}
+
+/* CARTÃO DO CURRÍCULO */
+.curriculo {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* CABEÇALHO ROXO */
+.cabecalho {
+    background: linear-gradient(135deg, #cc02cf, #9103ab);
+    color: white;
+    text-align: center;
+    padding: 35px 25px;
+}
+
+.dados h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.dados h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    color: #f0dff5;
+}
+
+.dados p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
+}
+
+/* BOTÕES */
+button {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 15px 5px 0;
+}
+
+#editar {
+    background-color: #fff;
+    color: #9103ab;
+}
+
+#editar:hover {
+    background-color: #f0dff5;
+}
+
+#sair {
+    background-color: #c0392b;
+    color: white;
+}
+
+#sair:hover {
+    background-color: #922b21;
+}
+
+/* SEÇÕES DO CURRÍCULO */
+.secao {
+    margin: 25px 35px;
+}
+
+.secao h2 {
+    color: #b802a6;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #9103ab;
+    padding-bottom: 7px;
+    margin-bottom: 12px;
+}
+
+.secao p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+/* EXPERIÊNCIA E FORMAÇÃO */
+.item {
+    margin-bottom: 20px;
+}
+
+.item h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.item p {
+    margin-bottom: 5px;
+}
+
+.data {
+    color: #777;
+    font-size: 13px;
+}
+
+.secao ul {
+    padding-left: 25px;
+    font-size: 14px;
+}
+
+.secao li {
+    margin-bottom: 4px;
+}
+
+/* HABILIDADES */
+.habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habilidades span {
+    background-color: #edf3fa;
+    border-left: 4px solid #9103ab;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #f5f7fa;
+    text-align: center;
+    padding: 15px;
+    color: #777;
+    font-size: 12px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .cabecalho {
+        padding: 28px 15px;
+    }
+
+    .dados h1 {
+        font-size: 26px;
+    }
+
+    .dados h2 {
+        font-size: 14px;
+    }
+
+    .secao {
+        margin: 25px 20px;
+    }
+
+    .habilidades {
+        gap: 8px;
+    }
+
+    button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+/* IMPRESSÃO DO CURRÍCULO */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .curriculo {
+        max-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .cabecalho {
+        background: #650476 !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    button {
+        display: none;
+    }
+
+    .habilidades span {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}
